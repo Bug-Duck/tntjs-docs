@@ -20,10 +20,10 @@ const FeatureList: FeatureItem[] = [
     description: (
       <Translate
         id="homepageFeatures.easyToUse.description"
-        description="Description of TNT.js's easy to use."
+        description="Description of tntjs's easy to use."
       >
-        Built with ease of use in mind, TNT.js was literally useable out of the box. However,
-        with the power of plugins, TNT also enables you to complicated tasks.
+        Built with ease of use in mind, tntjs was literally useable out of the box. However,
+        with the power of plugins, tntjs also enables you to complicated tasks.
       </Translate>
     ),
   },
@@ -37,9 +37,9 @@ const FeatureList: FeatureItem[] = [
     description: (
       <Translate
         id="homepageFeatures.focusOnWhatMatters.description"
-        description="Description about TNT.js lightweight and ease of use feature."
+        description="Description about tntjs lightweight and ease of use feature."
       >
-        TNT.js is very lightweight designed but also very scalable at the same time. Developers will only
+        tntjs is very lightweight designed but also very scalable at the same time. Developers will only
         have to focus on the core logic and TNT will handle the rest.
       </Translate>
     ),
@@ -54,9 +54,9 @@ const FeatureList: FeatureItem[] = [
     description: (
       <Translate
         id="homepageFeatures.dynamicallyUpdate.description"
-        description="Description about TNT.js dynamic variable update feature."
+        description="Description about tntjs dynamic variable update feature."
       >
-        TNT.js will dynamically update rendering results according to the current variable states,
+        tntjs will dynamically update rendering results according to the current variable states,
         making it easier to build modern websites.
       </Translate>
     ),

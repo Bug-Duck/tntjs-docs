@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TNT.js',
+  title: 'tntjs',
   url: 'https://tntjs.bugduck.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -56,9 +56,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'TNT',
+        title: 'tntjs',
         logo: {
-          alt: 'TNT.js logo',
+          alt: 'tntjs logo',
           src: 'img/tntjs-logo.png',
         },
         items: [

@@ -1,3 +1,3 @@
-# TNT.js Documentation
+# TNTjs Documentation
 
-This repository holds the documentation for [TNT.js](https://github.com/Bug-Duck/tntjs).
+This repository holds the documentation for [tntjs](https://github.com/Bug-Duck/tntjs).

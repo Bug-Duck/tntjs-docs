@@ -8,7 +8,7 @@
     "description": "The label for category Guide in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Guide.link.generated-index.description": {
-    "message": "在 10 分钟内掌握 TNT.js 的核心内容。",
+    "message": "在 10 分钟内掌握 tntjs 的核心内容。",
     "description": "The generated-index page description for category Guide in sidebar tutorialSidebar"
   }
 }
