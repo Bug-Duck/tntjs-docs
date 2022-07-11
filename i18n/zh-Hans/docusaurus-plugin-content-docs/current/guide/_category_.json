@@ -1,0 +1,8 @@
+{
+  "label": "Guide",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn core concepts of TNT.js in less than 10 minutes."
+  }
+}
