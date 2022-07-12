@@ -1,0 +1,90 @@
+---
+sidebar_position: 1
+---
+
+# Introduction
+
+Welcome to TNTjs documentation! This section will guide you to have a minimal concept of what is TNTjs and how it works.
+
+## What is TNTjs
+
+TNTjs is a lightweight, minimal designed frontend framework that focuses on developer experience. It provides various of builtin plugins and as well as powerful builtin features.
+
+TNTjs uses ES Modules in the browser, making things lots easier for web developers. However, this drops support for Internet Explorer - which we all discourage using.
+
+TNTjs comes with a variable management system which allows you to create, render, update and delete dynamic TNT variables, just as if they're native JavaScript variables.
+
+## How TNTjs works
+
+TNTjs was mainly separated into four parts:
+
+- TNT Runtime, the core components for TNTjs
+- TNT Renderers, the builtin renderers that comes with TNTjs
+- TNT Standard Plugins, aka TSP, is the builtin plugin library that allows users to load from directly
+- TNT App, the upper level API wrapper for TNT Runtime and TNT Renderers
+
+TNTjs users will only interact with the TNT App API and TNT strongly discourages users to use TNT Runtime directly. So for that, we didn't expose the API for TNT Runtime in TNT App.
+
+## Demo
+
+A basic TNT application will look as follows:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TNT App</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- to enable debug plugin -->
+      <tnt-debug></tnt-debug>
+      <!-- for loops -->
+      <t-for data="link in links">
+        <div>
+          <!-- variable display -->
+          <v data="link">Loading link...</v>
+        </div>
+      </t-for>
+    </div>
+    <!-- load the app file and use browser modules -->
+    <script type="module" src="./App.js"></script>
+  </body>
+</html>
+```
+
+```js title="App.js"
+import TNTApp from "https://cdn.jsdelivr.net/npm/tntjs@latest/dist/src/index.js";
+import DebugPlugin from "https://cdn.jsdelivr.net/npm/tntjs@latest/dist/src/plugins/debug/index.js";
+
+window.onload = () => {
+  // create a new TNT app
+  const app = new TNTApp(document.getElementById("root"), () => {
+    app.addPlugins([DebugPlugin]); // add a plugin
+    setTimeout(() => {
+      app.variables.links = [
+        // variable re-assignment
+        ...app.variables.links,
+        { link: "https://new.org", target: "_blank" }
+      ];
+    }, 5000);
+  });
+  // initial data
+  app.data({
+    links: ["https://google.com", "https://bing.com", "https://yahoo.com"]
+  });
+};
+```
+
+Jump into the CodeSandbox and play around with it!
+
+<iframe
+  src="https://codesandbox.io/embed/sad-lehmann-tvx1l4?fontsize=14&hidenavigation=1&theme=dark"
+  style={{width: "100%", height:"500px", border:0, borderRadius: "4px", overflow:"hidden"}}
+  title="sad-lehmann-tvx1l4"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>

@@ -11,24 +11,24 @@
     "description": "Title to section `Easy to use`."
   },
   "homepageFeatures.easyToUse.description": {
-    "message": "以易用性为设计宗旨，tntjs 完全可以开箱即用。当然，借助插件的力量，tntjs 也使你能够完成许多复杂的任务。",
-    "description": "Description of tntjs's easy to use."
+    "message": "以易用性为设计宗旨，TNTjs 完全可以开箱即用。当然，借助插件的力量，TNTjs 也使你能够完成许多复杂的任务。",
+    "description": "Description of TNTjs's easy to use."
   },
   "homepageFeatures.focusOnWhatMatters.title": {
     "message": "注重逻辑",
     "description": "Title to section `Focus on What Matters`."
   },
   "homepageFeatures.focusOnWhatMatters.description": {
-    "message": "tntjs 的设计架构在十分轻量的同时也允许你构建体量较大的应用。开发者只需要关注真正的核心逻辑，TNT 将会帮你完成剩下的工作。",
-    "description": "Description about tntjs lightweight and ease of use feature."
+    "message": "TNTjs 的设计架构在十分轻量的同时也允许你构建体量较大的应用。开发者只需要关注真正的核心逻辑，TNT 将会帮你完成剩下的工作。",
+    "description": "Description about TNTjs lightweight and ease of use feature."
   },
   "homepageFeatures.dynamicallyUpdate.title": {
     "message": "动态更新",
     "description": "Title for section `Dynamically update`."
   },
   "homepageFeatures.dynamicallyUpdate.description": {
-    "message": "tntjs 将会根据当前变量的状态动态更新页面渲染结果，使构建现代化网站更加简单。",
-    "description": "Description about tntjs dynamic variable update feature."
+    "message": "TNTjs 将会根据当前变量的状态动态更新页面渲染结果，使构建现代化网站更加简单。",
+    "description": "Description about TNTjs dynamic variable update feature."
   },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
