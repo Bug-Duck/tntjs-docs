@@ -31,13 +31,15 @@ https://cdn.jsdelivr.net/npm/tntjs@latest/dist/src/index.js
 `data`属性里面填写表达式
 
 js部分需要现实例化一个TNTApp
-```JavaScript
+```js
 export const app = new TNTApp();
 ```
 
 然后使用`page`预置页面：
-```JavaScript
+```js
 // App.js
+export const app = new TNTApp();
+
 app.page({
   data: {
     x: "Hello world!"
@@ -52,4 +54,43 @@ app.page({
 * 第一项参数中使用data来设置响应式变量的初始值
 * 第一项参数使用mount指定tntjs应用的作用域的Element对象(指定的节点只能有一个子节点)
 
-## 模板语法
+## 响应式变量计算
+使用computed来进行响应式变量的计算方式
+
+```js
+export const app = new TNTApp();
+
+app.page({
+  data: {
+    x: "Hello world!"
+  },
+  mount: document.getElementById("app"),
+  computed: {
+    number() {
+      return data.x + 1
+    }
+  }
+}, "page")
+```
+
+这里有几个强调的点：
+* tntjs响应式变量的值就存放在`window.data`里，你也可以直接用`data`来访问响应式变量的值
+* computed里定义的函数名就是变量名，函数返回的就是他的值，每当某个变量改变了值，这个变量就会被重新计算
+* computed里定义的函数计算出的值可以以`data.name`访问
+
+## 其他
+当TNTApp加载完毕后将会调用mounted你可以设置
+```js
+export const app = new TNTApp();
+
+app.page({
+  data: {
+    x: "Hello world!"
+  },
+  mounted() {
+    console.log("load!");
+  },
+  mount: document.getElementById("app"),
+}, "page")
+```
+
