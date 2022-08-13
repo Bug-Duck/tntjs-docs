@@ -78,6 +78,16 @@ app.page({
 * computed里定义的函数名就是变量名，函数返回的就是他的值，每当某个变量改变了值，这个变量就会被重新计算
 * computed里定义的函数计算出的值可以以`data.name`访问
 
+## demo:计数器
+现在你已经学会了基本使用，让我们来创建一个计数器，并且判断这个数是奇数还是偶数
+
+[App.js](../demos/comput/App.js ':include :type=code js')
+
+[index.html](../demo/../demos/comput/index.html ':include :type=code html')
+
+<iframe src="../demo/../demos/comput/index.html" height="300px"></iframe>
+
+
 ## 其他
 当TNTApp加载完毕后将会调用mounted你可以设置
 ```js
