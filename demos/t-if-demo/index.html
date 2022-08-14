@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <page-id>main-page</page-id>
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        if (window.location.search === "?login=true") {
+          data.islogin = true;
+        }
+      }
+    </script>
+    <div id="app">
+      <div>
+        <t-if cond="islogin">
+          您已登录 
+        </t-if>
+        <t-else>
+          您未登录<a href="./login.html">点此登录</a>
+        </t-else>
+      </div>
+    </div>
+    <script src="./App.js" type="module"></script>
+  </body>
+</html>

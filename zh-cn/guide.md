@@ -47,7 +47,7 @@ app.page({
   mount: document.getElementById("app")
 }, "page")
 ```
-* 每一个html文件都有一个单独的pageid，你可以使用`<page-id>`来在`<head>`中设置它
+* 每一个html文件都有一个单独的pageid，你可以使用`<page-id>`来在`<head>`中设置它，这是tntjs多页面编程的页面标识符
 ```html
 <page-id>page1</page-id>
 ```
@@ -81,14 +81,21 @@ app.page({
 ## demo:计数器
 现在你已经学会了基本使用，让我们来创建一个计数器，并且判断这个数是奇数还是偶数
 
+<!-- tabs:start -->
+
+### **App.js**
 [App.js](../demos/comput/App.js ':include :type=code js')
 
+### **index.html**
 [index.html](../demo/../demos/comput/index.html ':include :type=code html')
 
-<iframe src="../demo/../demos/comput/index.html" height="300px"></iframe>
+<!-- tabs: end -->
+
+效果:
+<iframe src="../demos/comput/index.html" height="300px"></iframe>
 
 
-## 其他
+## mounted
 当TNTApp加载完毕后将会调用mounted你可以设置
 ```js
 export const app = new TNTApp();
@@ -104,3 +111,108 @@ app.page({
 }, "page")
 ```
 
+## effect
+你可以将`effect`作为主程序使用
+```js
+export const app = new TNTApp();
+
+app.page({
+  data: {
+    x: "Hello world!"
+  },
+  effect() {
+    console.log("App is running!");
+  },
+  mount: document.getElementById("app"),
+}, "page")
+```
+
+# 模板语法
+
+## `<t-for>`
+`t-for`标签可以循环遍历一个数组并且以"局部响应式变量"的方式来访问
+```html
+<t-for data="i in array"></t-for>
+```
+比如我们可以用他打印一个可以自由添加的名单
+
+<!-- tabs:start -->
+
+### **index.html**
+[index.html](../demos/t-for-demo/index.html ':include :type=code html')
+
+### **App.js**
+[App.js](../demos/t-for-demo/App.js ':include :type=code js')
+
+<!-- tabs:end -->
+
+效果:
+
+<iframe src="../demos/t-for-demo/index.html" height="600px"></iframe>
+
+## 条件判断模板
+
+`<t-if>`以及`<t-else>`和`<t-elif>`用于判断条件
+
+```html
+<t-if cond="xxx === xxx"></t-if>
+```
+
+
+<!-- tabs:start -->
+
+### **index.html**
+[index.html](../demos/t-if-demo/index.html ':include :type=code html')
+
+### **login.html**
+[login.html](../demos/t-if-demo/login.html ':include :type=code html')
+
+### **App.js**
+[App.js](../demos/t-if-demo/App.js ':include :type=code js')
+
+<!-- tabs:end -->
+
+我们需要两个页面，那么就用tntjs注册两个吧！
+
+如果用户输入密码正确就回到`index.html`并且传入参数`?login=true`
+
+这里假设账号为`useradmin`,密码为`123456`
+
+```text
+温馨提示：请保护好自己的隐私，在现实中密码不能设的那么简单哦！
+```
+
+效果：
+
+<iframe src="../demos/t-if-demo/index.html" hieght="300px"></iframe>
+
+## `<t-get>`
+
+`<t-get>`方便用户从后端取得数据并且快捷的用`<v>`渲染到页面上
+
+```html
+<t-get src="api" data="?x=233333" type="json">
+```
+
+* `src` 指定api
+* `data` 附加参数
+* `type` 请求数据类型，默认为text,目前可选项有(text | json)
+
+这里我们有一个json文件保存的是Alice的个人信息
+
+<!-- tabs:start -->
+
+### **index.html**
+[index.html](../demos/t-get-demo/index.html ':include :type=code html')
+
+### **data.json**
+[login.html](../demos/t-get-demo/data.json ':include :type=code json')
+
+### **App.js**
+[App.js](../demos/t-get-demo/App.js ':include :type=code js')
+
+<!-- tabs:end -->
+
+效果：
+
+<iframe src="../demos/t-get-demo/index.html" height="120px"></iframe>

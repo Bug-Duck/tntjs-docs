@@ -13,6 +13,12 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
+    <style>
+      :root {
+        --docsifytabs-border-color: #ededed;
+        --docsifytabs-tab-highlight-color: #FF3C3C;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -30,10 +36,18 @@
         themeColor: '#FF3C3C',
         loadNavbar: true,
         coverpage: true,
-        loadNavbar: true
-      };
+        loadNavbar: true,
+        tabs: {
+            persist    : true,
+            sync       : true,
+            theme      : 'classic',
+            tabComments: true,
+            tabHeadings: true
+          }
+        };
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   </body>
 </html>

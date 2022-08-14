@@ -4,15 +4,16 @@ const app = new TNTApp()
 
 app.page({
   data: {
-    number: 1
-  },
-  computed: {
-    isOddOrEven() {
-      if (data.number % 2 === 0) return "Even" 
-      else return "Odd"; 
-    }
+    islogin: false
   },
   mount: document.getElementById("app")
-}, "comput")
+}, "main-page")
 
-export default app;
+app.page({
+  data: {
+    message: "",
+  },
+  mount: document.getElementById("app")
+}, "login")
+
+export default app ;

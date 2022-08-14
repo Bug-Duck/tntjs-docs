@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tntjs name demo</title>
+    <page-id>list</page-id>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <ul>
+          <t-for data="i in nameList">
+            <li><v data="i"></v></li>
+          </t-for>
+        </ul>
+        All people number: <v data="all"></v><br />
+        <input type="text" id="name" /><button
+          onclick="data.nameList.push(document.getElementById('name').value)"
+        >
+          add a person
+        </button>
+      </div>
+    </div>
+    <script type="module" src="./App.js"></script>
+  </body>
+</html>

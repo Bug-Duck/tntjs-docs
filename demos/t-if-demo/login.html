@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tntjs comput demo</title>
+    <page-id>login</page-id>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        Login form<br />
+        username: <input type="text" id="username" /><br />
+        password: <input type="password" id="password" /><br />
+        <button onclick="login()">Next</button><br/>
+        <v data="message" style="color: red; font-size: 9px"></v>
+      </div>
+    </div>
+    <script>
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        if (username === "useradmin" && password == "123456") {
+          window.location.href = "./index.html?login=true";
+        } else data.message = "You username or password isn't right!!!!!!"
+      }
+    </script>
+    <script type="module" src="./App.js"></script>
+  </body>
+</html>

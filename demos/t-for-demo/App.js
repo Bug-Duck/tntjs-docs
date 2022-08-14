@@ -4,15 +4,18 @@ const app = new TNTApp()
 
 app.page({
   data: {
-    number: 1
+    nameList: [
+      "Alice",
+      "Bob",
+      "Candy"
+    ]
   },
   computed: {
-    isOddOrEven() {
-      if (data.number % 2 === 0) return "Even" 
-      else return "Odd"; 
+    all() {
+      return data.nameList.length
     }
   },
   mount: document.getElementById("app")
-}, "comput")
+}, "list")
 
 export default app;

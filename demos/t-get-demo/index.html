@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tntjs comput demo</title>
+  <page-id>t-get-demo</page-id>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <t-get src="./data.json" type="json">
+        <table border="true">
+          <tr>
+            <td>姓名</td>
+            <td><v data="name"></v></td>
+          </tr>
+          <tr>
+            <td>年龄</td>
+            <td><v data="age"></v></td>
+          </tr>
+          <tr>
+            <td>学校</td>
+            <td><v data="school"></v></td>
+          </tr>
+        </table>
+      </t-get>
+    </div>
+  </div>
+  <script type="module" src="./App.js"></script>
+</body>
+</html>

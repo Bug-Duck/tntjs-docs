@@ -3,16 +3,7 @@ import { TNTApp } from "https://cdn.jsdelivr.net/npm/tntjs@latest/dist/src/index
 const app = new TNTApp()
 
 app.page({
-  data: {
-    number: 1
-  },
-  computed: {
-    isOddOrEven() {
-      if (data.number % 2 === 0) return "Even" 
-      else return "Odd"; 
-    }
-  },
   mount: document.getElementById("app")
-}, "comput")
+}, "t-get-demo")
 
 export default app;
