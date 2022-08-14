@@ -4,5 +4,5 @@
   <img src="https://img.shields.io/npm/v/tntjs?style=flat-square"/>
   <img src="https://img.shields.io/static/v1?label=bilibili&message=BugDuck开源团队&color=ff69b4&logo=bilibili&style=flat-square"/>
   <br/><br/><br/><br/><br/><br/>
-  <a href="#/zh-cn/guide" style="font-size: 300%; color: skyblue">go💥</a>
+  <a href="#/guide" style="font-size: 300%; color: skyblue">go💥</a>
 </center>
