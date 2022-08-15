@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>tntjs document</title>
+    <link rel="shortcut icon" href="./img/tntjs-logo.png">
+    <title>tntjs——A Javacript framework that can control multiple pages</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description" />
     <meta
@@ -16,16 +17,11 @@
     <style>
       :root {
         --docsifytabs-border-color: #ededed;
-        --docsifytabs-tab-highlight-color: #FF3C3C;
+        --docsifytabs-tab-highlight-color: #ff3c3c;
       }
     </style>
   </head>
   <body>
-    <nav>
-      <a href="https://github.com/Bug-Duck/tntjs">Github</a>
-      <a href="https://gitee.com/BugDucker/tntjs">Gitee</a>
-      <a href="https://space.bilibili.com/1959824394">Bilibili</a>
-    </nav>
     <div id="app"></div>
     <script>
       window.$docsify = {
@@ -33,21 +29,22 @@
         nameLink: "/",
         repo: "https://github.com/Bug-Duck/tntjs",
         // logo: "./img/tntjs-banner.png",
-        themeColor: '#FF3C3C',
+        themeColor: "#FF3C3C",
         loadNavbar: true,
         coverpage: true,
         loadNavbar: true,
         tabs: {
-            persist    : true,
-            sync       : true,
-            theme      : 'classic',
-            tabComments: true,
-            tabHeadings: true
-          }
-        };
+          persist: true,
+          sync: true,
+          theme: "classic",
+          tabComments: true,
+          tabHeadings: true,
+        },
+      };
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   </body>
 </html>
