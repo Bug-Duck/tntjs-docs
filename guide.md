@@ -51,8 +51,8 @@ app.page({
 ```html
 <page-id>page1</page-id>
 ```
-* Use data in the first parameter to set the initial value of the responsive variable
-* The first parameter uses mount to specify the Element object of the scope of the tntjs application (the specified node can only have one child node)
+* Use `data` in the first parameter to set the initial value of the responsive variable
+* The first parameter uses `mount` to specify the Element object of the scope of the tntjs application (the specified node can only have one child node)
 
 ## Responsive variable calculation
 Use computed to calculate reactive variables
@@ -121,11 +121,13 @@ app.page({
     x: "Hello world!"
   },
   effect() {
-    console.log("App is running!");
+    console.log(data.x);
   },
   mount: document.getElementById("app"),
 }, "page")
 ```
+
+When the `x` changes, the effect will be called once, which can monitor the change of the variable
 
 # Template syntax
 

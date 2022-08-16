@@ -121,11 +121,13 @@ app.page({
     x: "Hello world!"
   },
   effect() {
-    console.log("App is running!");
+    console.log(data.x);
   },
   mount: document.getElementById("app"),
 }, "page")
 ```
+
+当变量`x`改变时,就会调用一次effect,可以监听变量的变化
 
 # 模板语法
 
